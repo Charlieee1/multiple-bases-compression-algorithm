@@ -12,7 +12,7 @@ We will now store 3 pieces of information, 3, 4, and 5 states respectively, as i
 This can be expanded to use more pieces of information, and different amounts of states for each piece.
 
 ## Decoding
-// TODO: write
+For decoding, we assume we already know how many pieces of information are encoded, how many states each piece can be in, and the correct order. We will use the example above. First we check the value of the piece of information with 5 different states. We take each of the possible states (4 to 0), and multiply them by (4*3). We check each of them to see if they are less that the encoded number. If yes, then subtract it from the encoded number and divide by 12 to obtain the first piece of information. Repeat for all pieces of information.
 
 ## Implementation
 
