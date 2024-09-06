@@ -15,5 +15,20 @@ This can be expanded to use more pieces of information, and different amounts of
 For decoding, we assume we already know how many pieces of information are encoded, how many states each piece can be in, and the correct order. We will use the example above. First we check the value of the piece of information with 5 different states. We take each of the possible states (4 to 0), and multiply them by (4*3). We check each of them to see if they are less that the encoded number. If yes, then subtract it from the encoded number and divide by 12 to obtain the first piece of information. Repeat for all pieces of information.
 
 ## Implementation
+The example implementations are written in Python 3.  
+[Encoder](https://github.com/Charlieee1/multiple-bases-compression-algorithm/blob/main/encoder.py)  
+Time complexity: O(N(A+B)), where:  
+- N is the amount of pieces of information
+- O(A) is the time complexity for addition
+- O(B) is the time complexity for multiplication
+
+[Decoder](https://github.com/Charlieee1/multiple-bases-compression-algorithm/blob/main/decoder.py)  
+Time complexity: O(NM(A+B)), where:  
+- N is the amount of pieces of information
+- M is the average number of possible states for the pieces of information
+- O(A) is the time complexity for addition
+- O(B) is the time complexity for multiplication
+
+The reason the time complexities for addition and multiplication matter is because the numbers used can get very large.
 
 ## Use cases
