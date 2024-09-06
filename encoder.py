@@ -1,4 +1,4 @@
-INFORMATION_STATES = [15, 16, 17]
+INFORMATION_STATES = [3, 4, 5]
 # Assume information entered is valid
 data = [int(input()) for i in range(len(INFORMATION_STATES))]
 

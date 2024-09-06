@@ -1,4 +1,4 @@
-INFORMATION_STATES = [15, 16, 17]
+INFORMATION_STATES = [3, 4, 5]
 encoded_number = int(input())
 
 multipliers = [1]
