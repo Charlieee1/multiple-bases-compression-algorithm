@@ -1,4 +1,4 @@
-# multiple-bases-compression-algorithm
+# Multiple Bases Compression Algorithm
 An algorithm I invented one night to combine and compress information with multiple bases. I do not know if this has been discovered before. The closest algorithm I can find is the [Double Dabble algorithm](https://en.wikipedia.org/wiki/Double_dabble).
 
 ## Problem
@@ -32,3 +32,4 @@ Time complexity: O(NM(A+B)), where:
 The reason the time complexities for addition and multiplication matter is because the numbers used can get very large.
 
 ## Use cases
+This algorithm probably has very few use cases, since most information is already stored in base-2 friendly values. However, there is one (obscure) case I can give where this can be useful: Scratch cloud variables. The information to be stored can be in the form of different bases, and the space to store it is very limited. This problem of maximizing information density is what inspired me to develop this algorithm.
