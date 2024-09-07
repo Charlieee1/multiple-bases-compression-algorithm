@@ -9,7 +9,9 @@ Let's store 3 pieces of information, each with 10 possible states, in the minimu
 
 ## General case
 We will now store 3 pieces of information, 3, 4, and 5 states respectively, as in the introduction. The naive approach uses 7 bits. We start with a number 0 that is our encoded information. We add to it the first piece of information (3 possible states, from 0 to 2). Next, we multiply the second piece of information (0 to 3) by the amount of possible states in the first piece (3). We add the product to the encoded number. For the final piece of information, we multiply it (0 to 4) by the amounts of possible states in the first two pieces (3*4), and add it to the encoded number. The encoded number will have a minimum value of 0, and a maximum value of `2+3*3+4*4*3=59`. Taking log base 2 of 60 (possible states) and rounding up, the encoded number requires 6 bits to store.  
-This can be expanded to use more pieces of information, and different amounts of states for each piece.
+This can be expanded to use more pieces of information, and different amounts of states for each piece.  
+
+In short, the algorithm works by creating a number with each digit having a (potentially) different base (ie. base 2 for one digit, and base 10 for another).
 
 ## Decoding
 For decoding, we assume we already know how many pieces of information are encoded, how many states each piece can be in, and the correct order. We will use the example above. First we check the value of the piece of information with 5 different states. We take each of the possible states (4 to 0), and multiply them by (4*3). We check each of them to see if they are less that the encoded number. If yes, then subtract it from the encoded number and divide by 12 to obtain the first piece of information. Repeat for all pieces of information.
@@ -28,6 +30,8 @@ Time complexity: O(NM(A+B)), where:
 - M is the average number of possible states for the pieces of information
 - O(A) is the time complexity for addition
 - O(B) is the time complexity for multiplication
+
+Note: the speed of the decoder can be improved using modulus.  
 
 The reason the time complexities for addition and multiplication matter is because the numbers used can get very large.
 
