@@ -36,4 +36,9 @@ Note: the speed of the decoder can be improved using modulus.
 The reason the time complexities for addition and multiplication matter is because the numbers used can get very large.
 
 ## Use cases
-This algorithm probably has very few use cases, since most information is already stored in base-2 friendly values. However, there is one (obscure) case I can give where this can be useful: Scratch cloud variables. The information to be stored can be in the form of different bases, and the space to store it is very limited. This problem of maximizing information density is what inspired me to develop this algorithm.
+This algorithm probably has very few use cases, since most information is already stored in base-2 friendly values. However, there are two (obscure) cases I can give where this can be useful: Scratch cloud variables and Desmos. For Scratch, the information to be stored can be in the form of different bases, and the space to store it is very limited. This problem of maximizing information density is what inspired me to develop this algorithm. For desmos, this algorithm could provide a way to store a little extra information within the 5 MB graph size limit (yes, this matters for some projects).
+
+## Desmos Implementation
+The user `ronwnor` created an implementation for desmos:  
+<img alt="Ronwnor's implementation of the algorithm" src="/image.png" width="40%">  
+This implementation is faster and more powerful than my python implementation, as it can extract individual pieces of information just by selecting one element of the `p` list in the last expression. You can find a replica graph [here](https://www.desmos.com/calculator/muni088ksu). I recommend using ronwnor's implementation rather than mine.
