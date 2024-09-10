@@ -42,3 +42,5 @@ This algorithm probably has very few use cases, since most information is alread
 The user `ronwnor` created an implementation for desmos:  
 <img alt="Ronwnor's implementation of the algorithm" src="https://raw.githubusercontent.com/Charlieee1/multiple-bases-compression-algorithm/main/image.png?raw=true" width="40%">  
 This implementation is faster and more powerful than my python implementation, as it can extract individual pieces of information just by selecting one element of the `p` list in the last expression. You can find a replica graph [here](https://www.desmos.com/calculator/muni088ksu). I recommend using ronwnor's implementation rather than mine.
+
+[Repository Link](https://github.com/Charlieee1/multiple-bases-compression-algorithm)
